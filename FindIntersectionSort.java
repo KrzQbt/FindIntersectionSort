@@ -67,13 +67,14 @@ public class FindIntersectionSort {
         // algorithm
         System.out.println("sizes: "+shorter.size()+ " " +longer.size());
         shorter.sort(Comparator.naturalOrder());
+        
         System.out.println("shorter");
         shorter.forEach(integer -> System.out.print(integer+" "));
+        
         System.out.println("\nlonger");
         longer.forEach(integer -> System.out.print(integer+" "));
+        
         System.out.println("\nintersection");
-
-
         longer.forEach(integer -> {
             if (binarySearch(integer,shorter))
                 intersection.add(integer);
